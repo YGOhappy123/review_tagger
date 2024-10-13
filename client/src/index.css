@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* SwiperJS Overwrite */
+.swiperJS-media-wrapper .swiper-slide {
+    width: 100%;
+    opacity: 0.6;
+    padding-bottom: 3rem;
+    user-select: none;
+}
+
+.swiperJS-media-wrapper .swiper-slide-active {
+    opacity: 1;
+}
+
+.swiperJS-media-wrapper .swiper-pagination-bullet {
+    background-color: #ec7532;
+}
+
+.swiperJS-media-wrapper .swiper-button-next,
+.swiperJS-media-wrapper .swiper-button-prev {
+    color: #ec7532;
+}
+
+.swiperJS-media-wrapper .swiper-button-next::after,
+.swiperJS-media-wrapper .swiper-button-prev::after {
+    font-size: 1rem;
+}
+
+.swiperJS-media-wrapper .swiper {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media (min-width: 768px) {
+    .swiperJS-media-wrapper .swiper-button-next::after,
+    .swiperJS-media-wrapper .swiper-button-prev::after {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .swiperJS-media-wrapper .swiper {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(252, 252, 252, 0.6);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    background-image: linear-gradient(to bottom, #ec7532, #fbbd61);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    opacity: 90;
+}
+
+/* Prevent Autofill CSS */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #fff;
+    transition: background-color 5000s ease-in-out 0s;
+    box-shadow: inset 0 0 20px 20px #23232329;
+}
