@@ -173,6 +173,23 @@ const ReviewItem = ({ review, handleRemoveReviewFromUI }) => {
                 </div>
 
                 <p className='mt-4'>{review.content}</p>
+                <div className="mt-4 flex items-center gap-2 text-base font-medium text-neutral-500">
+                    Tags:{' '}
+                    {review.tags.length > 0 ? (
+                        <div className="flex gap-3">
+                            {review.tags.map((tag) => (
+                                <span
+                                    key={tag}
+                                    className="flex items-center justify-center rounded-3xl bg-neutral-500 px-4 py-0.5 text-black"
+                                >
+                                    #{tag}
+                                </span>
+                            ))}
+                        </div>
+                    ) : (
+                        <span className="italic">(None)</span>
+                    )}
+                </div>
             </div>
         </div>
     )

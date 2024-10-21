@@ -92,7 +92,7 @@ const MediaReviews = ({ heading, mediaType, media, reviews }) => {
                     {heading} ({`0${reviewCount}`.slice(-2)})
                 </h2>
 
-                <div className="mb-10 max-h-[400px] overflow-y-scroll scroll-smooth" ref={commentsRef}>
+                <div className="mb-10 max-h-[600px] overflow-y-scroll scroll-smooth" ref={commentsRef}>
                     {filteredReviews.map((item) => (
                         <ReviewItem key={item._id} review={item} handleRemoveReviewFromUI={handleRemoveReviewFromUI} />
                     ))}
