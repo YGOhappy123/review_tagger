@@ -1,0 +1,9 @@
+numpy
+pandas
+matplotlib
+joblib
+
+scikit-learn==1.2.1
+scikit-multilearn==0.2.0
+underthesea==6.8.4
+Flask==3.0.3
